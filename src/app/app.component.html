@@ -1,0 +1,45 @@
+<div class="container">
+    <div id="simple-calc">
+        <h2>Simple calculator with two numbers and an operator</h2>
+
+        <div class="form-group field-one">
+            <label for="first-num" >First number</label>
+            <input class="form-control" type="number" id="first-num" [(ngModel)]="scInput1" #ctrl="ngModel" required>
+        </div>
+
+        <div class="form-group field-two">
+            <label for="operator">Operator</label>
+            <select multiple class="form-control" id="operator" [(ngModel)]="scOperator" #ctrl="ngModel" required>
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+            </select>
+        </div>
+
+        <div class="form-group field-three">
+            <label for="second-num">Second number</label>
+            <input class="form-control" type="number" id="second-num" [(ngModel)]="scInput2" #ctrl="ngModel" required>
+        </div>
+
+        <div class="answer-group">
+            <button class="btn btn-primary" (click)="calc()">Go beibi!</button>
+            <h3>Answer: {{scOutput}}</h3>
+        </div>
+
+        <br><br>
+    </div>
+    <hr>
+    <div id="advanced-calc">
+        <h2>Advanced arithmetic calculator</h2>
+        
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="Enter arithmetic expression" [(ngModel)]="acInput">
+        </div>
+
+        <div class="answer-group">
+            <button class="btn btn-primary" type="submit" (click)="advCalc()">Math that shit!</button>
+            <h3>Answer: {{acOutput}}</h3>
+        </div>
+    </div>
+</div>
